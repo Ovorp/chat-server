@@ -7,7 +7,7 @@ const {
   toDelete,
 } = require('./controllers/messages_controller');
 const PORT = 3001;
-app.use(express.static('/../public/build'));
+app.use(express.static(__dirname + '/../public/build'));
 app.use(express.json());
 
 app.get('/api/messages', read);
