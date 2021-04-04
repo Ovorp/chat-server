@@ -20,6 +20,7 @@ update = (req, res) => {
   messages.forEach((val, i) => {
     if (val.id === +id) {
       messages[i] = {
+        // this will set the value of the key to the new value or if that value is missing it will set it to the original value.
         text: text || messages[i].text,
         time: time || messages[i].time,
         id: +id,
